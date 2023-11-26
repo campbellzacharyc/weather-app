@@ -1,0 +1,16 @@
+body {
+    background-color: aquamarine;
+}
+
+h1 {
+    text-align: center;
+    font-family: Arial black;
+}
+
+form {
+    text-align: center;
+}
+
+.container {
+    display: grid;
+}

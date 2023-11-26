@@ -1,1 +1,1 @@
-# weather-app
+This is a weather app built using JavaScript async/await functions and the Weather API. This project is part of The Odin Project Curriculum. 
