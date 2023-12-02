@@ -7,7 +7,7 @@ async function getCity() {
         console.log(city);
         console.log(state);
         console.log(country);
-        
+        console.log('https://api.weatherapi.com/v1/forecast.json?key=74c0c557814f4abbbea20356232611&q=' + city + '_' + state + '_' + country + '&days=3')
         const response = await fetch('https://api.weatherapi.com/v1/forecast.json?key=74c0c557814f4abbbea20356232611&q=' + city + '_' + state + '_' + country + "&days=3", {mode: "cors"});
         const currentData = await response.json();
         console.log("Fetching current weather data from API....", currentData);
