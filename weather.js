@@ -72,12 +72,8 @@ async function displayWeather(weatherToday, weatherTomorrow, weatherThird) {
     displayToday.appendChild(city);
 
     const condition = document.createElement('p');
-    condition.textContent = weatherToday.condition;
+    condition.textContent = weatherToday.condition + ', ' + weatherToday.temp + ' currently';
     displayToday.appendChild(condition);
-
-    const temp = document.createElement('p');
-    temp.textContent = weatherToday.temp + ' currently';
-    displayToday.appendChild(temp);
 
     const maxTemp = document.createElement('p');
     maxTemp.textContent = weatherToday.max_temp + ' high';
@@ -90,6 +86,10 @@ async function displayWeather(weatherToday, weatherTomorrow, weatherThird) {
     const humidity = document.createElement('p');
     humidity.textContent = weatherToday.humidity + ' humidity';
     displayToday.appendChild(humidity);
+
+    const wind = document.createElement('p');
+    wind.textContent = weatherToday.wind + ' winds';
+    displayToday.appendChild(wind);
 
     // weather tomorrow 
     const displayTomorrow = document.querySelector('.day2');
@@ -116,6 +116,10 @@ async function displayWeather(weatherToday, weatherTomorrow, weatherThird) {
     humidityTomorrow.textContent = weatherTomorrow.humidity + ' humidity';
     displayTomorrow.appendChild(humidityTomorrow);
 
+    const windTomorrow = document.createElement('p');
+    windTomorrow.textContent = weatherTomorrow.wind + ' winds';
+    displayTomorrow.appendChild(windTomorrow);
+
     // weather day 3
     const displayThird = document.querySelector('.day3');
     displayThird.style.padding = '20px';
@@ -141,5 +145,8 @@ async function displayWeather(weatherToday, weatherTomorrow, weatherThird) {
     humidityThird.textContent = weatherThird.humidity + ' humidity';
     displayThird.appendChild(humidityThird);
 
+    const windThird = document.createElement('p');
+    windThird.textContent = weatherThird.wind + ' winds';
+    displayThird.appendChild(windThird);
 };
 
